@@ -2,7 +2,6 @@
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.preprocessing import sequence
