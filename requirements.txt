@@ -1,0 +1,15 @@
+pytorch-lightning>=2.2.2
+torch>=2.2.2
+torchtext>=0.17.2
+torchmetrics>=0.11.0
+transformers>=4.30.0
+pandas
+matplotlib
+seaborn
+scikit-learn
+nltk
+tqdm
+streamlit
+pyplot
+pillow
+yaml
