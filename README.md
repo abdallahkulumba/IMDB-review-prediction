@@ -1,49 +1,49 @@
-# Simple RNN IMDB review Project
+---
+sdk: streamlit
+sdk_version: 1.25.0
+---
 
-This project implements a Simple Recurrent Neural Network (RNN) for sentiment analysis on the IMDB movie reviews dataset. The goal is to classify movie reviews as positive or negative based on the text content.
+# 🎬 IMDB Sentiment Analysis Dashboard
 
-## Overview
+A multi-model sentiment analysis dashboard built with Streamlit and PyTorch. This app lets you paste any movie review and instantly compare predictions across multiple deep learning architectures: RNN, LSTM, GRU, GloVe, and Transformer.
 
-The Simple RNN model is designed to process sequences of text data, making it suitable for tasks like sentiment analysis. This project utilizes the IMDB dataset, which contains 50,000 movie reviews labeled as either positive or negative.
+👉 **Live demo:** [Open the app on Hugging Face Spaces](https://huggingface.co/spaces/Sserujja/imdb-sentiment-model)
 
-## Requirements
+---
 
-To run this project, you need to install the following dependencies:
+## ✨ Features
 
-- **TensorFlow 2.15.0**: A powerful library for building and training machine learning models.
-- **Pandas**: A data manipulation library that provides data structures for efficiently handling structured data.
-- **NumPy**: A library for numerical computations in Python.
-- **Scikit-learn**: A machine learning library that provides tools for model evaluation and preprocessing.
-- **TensorBoard**: A visualization tool for monitoring training progress and model performance.
-- **Matplotlib**: A plotting library for creating static, animated, and interactive visualizations in Python.
-- **Streamlit**: A framework for building interactive web applications for machine learning and data science projects.
-- **Scikeras**: A wrapper for Keras that integrates with Scikit-learn.
+- Interactive text input with confidence gauges for each model
+- Clean dashboard UI with visual word-frequency analysis
+- Lightweight inference-only deployment (no raw data required)
+- Modular design for easy model integration
+- Hosted on Hugging Face Spaces — accessible and shareable
 
-You can install the required packages using the following command:
+---
+
+## 🧠 Models Supported
+
+| Model        | Tokenizer       | Checkpoint Format |
+|--------------|------------------|-------------------|
+| RNN          | PyTorchTokenizer | `.ckpt`           |
+| LSTM         | PyTorchTokenizer | `.ckpt`           |
+| GRU          | PyTorchTokenizer | `.ckpt`           |
+| GloVe        | PyTorchTokenizer | `.ckpt` (no .txt) |
+| Transformer  | PyTorchTokenizer | `.ckpt`           |
+
+> BERT model was trained but not included in deployment to reduce size.
+
+---
+
+## 🚀 Run Locally
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/Sserujja/imdb-sentiment-model.git
+cd imdb-sentiment-model
+
+# 2. Create environment and install requirements
 pip install -r requirements.txt
-```
 
-## Running the Streamlit App
-
-To run the Streamlit app, use the following command in your terminal:
-
-```bash
-streamlit run your_app_file.py
-```
-
-Replace `your_app_file.py` with the name of your Streamlit app file in mycase the name was 'main.py'. This will start a local server, and you can access the app in your web browser at `http://localhost:8501`.
-
-## Usage Instructions
-
-1. **Data Preparation**: Ensure that the IMDB dataset is available and properly formatted for the model.
-2. **Model Training**: Train the Simple RNN model using the provided training scripts. Monitor the training process using TensorBoard.
-3. **Running the App**: After training, run the Streamlit app to interact with the model. You can input movie reviews and receive predictions on their sentiment.
-4. **Visualizations**: The app may include visualizations of model performance, such as accuracy and loss graphs.
-
-## Conclusion
-
-This project serves as a practical implementation of a Simple RNN for sentiment analysis. It demonstrates the process of building, training, and deploying a machine learning model using Streamlit for user interaction.
-
-Feel free to explore the code and modify it to suit your needs!
+# 3. Run the Streamlit app
+streamlit run app.py
