@@ -8,7 +8,7 @@ sdk_version: 1.25.0
 A multi-model sentiment analysis dashboard built with Streamlit and PyTorch. This app lets you paste any movie review and instantly compare predictions across multiple deep learning architectures: RNN, LSTM, GRU, GloVe, and Transformer.  This projects falls in the NLP model series where different NLP more tasted to give movie review basing on user's comment
 you can access the full file on my hugging face page (https://huggingface.co/Sserujja)
 
-![capture](image/capture.png)
+![capture](image/Capture.PNG)
 
 
 👉 **Live demo:** [Open the app on Hugging Face Spaces](https://huggingface.co/spaces/Sserujja/imdb-sentiment-model)
@@ -37,7 +37,7 @@ you can access the full file on my hugging face page (https://huggingface.co/Sse
 
 > BERT model was trained but not included in deployment to reduce size.
 
-![capture2](image/capture2.png)
+![capture2](image/Capture2.PNG)
 
 
 ---
